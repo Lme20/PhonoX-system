@@ -19,7 +19,9 @@
   "license": "MIT",
   "config": {
     "forge": {
-      "icon": "/Users/louismercier/Projects/PhonoX-system/src/renderer/assets/img/PhonoX-icon.png",
+      "packagerConfig": {
+        "icon": "./src/renderer/assets/img/icons/mac/icon.icns"
+      },
       "make_targets": {
         "win32": [
           "squirrel"
@@ -60,6 +62,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "electron-forge": "^5.2.4",
+    "electron-icon-builder": "^2.0.1",
     "electron-prebuilt-compile": "8.2.0",
     "eslint": "^3",
     "eslint-config-airbnb": "^15",

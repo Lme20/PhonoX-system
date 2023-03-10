@@ -11,16 +11,32 @@ if (require('electron-squirrel-startup')) { // eslint-disable-line global-requir
 // be closed automatically when the JavaScript object is garbage collected.
 let menuWindow;
 
+const electron = require('electron');
+const path = require('path');
+
+// Set the path for the invisible icon
+const invisibleIconPath = path.join(__dirname, './renderer/assets/img/icons/png/64x64.png');
+
+// Set the app icon to a transparent icon
+const invisibleIcon = electron.nativeImage.createFromPath(invisibleIconPath);
+app.dock.setIcon(invisibleIcon);
+
 const createWindow = () => {
   // Create the browser window.
   menuWindow = new BrowserWindow({
     width: 800,
     height: 600,
-    icon: path.join(__dirname, '/src/renderer/assets/img/PhonoX-icon.png'),
+    icon: path.join(__dirname, './renderer/assets/img/icons/png/64x64.png'),
     webPreferences: {
       nodeIntegration: true
     }
   });
+
+  // change doc icon MAC
+//const app = electron.app;
+//const iconPath = path.join(__dirname, './renderer/assets/img/icons/png/64x64.png');
+//const image = electron.nativeImage.createFromPath(iconPath);
+  //app.dock.setIcon(image);
 
   // and load the index.html of the app.
   menuWindow.loadURL(`file://${__dirname}/index.html`);
@@ -40,7 +56,19 @@ const createWindow = () => {
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
-app.on('ready', createWindow);
+//app.on('ready', createWindow);
+
+app.on('ready', () => {
+  // Set the app icon to a transparent icon
+  const iconPath = path.join(__dirname, './renderer/assets/img/icons/png/64x64.png');
+  const image = electron.nativeImage.createFromPath(iconPath);
+  //app.dock.setIcon(invisibleIcon);
+  app.dock.setIcon(image);
+
+  createWindow();
+
+});
+
 
 // Quit when all windows are closed.
 app.on('window-all-closed', () => {
