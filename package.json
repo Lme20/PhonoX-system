@@ -13,6 +13,9 @@
   },
   "keywords": [],
   "author": "louismercier",
+  "permissions": [
+    "write"
+  ],
   "license": "MIT",
   "config": {
     "forge": {
@@ -49,7 +52,8 @@
   },
   "dependencies": {
     "electron-compile": "^6.4.4",
-    "electron-squirrel-startup": "^1.0.0"
+    "electron-squirrel-startup": "^1.0.0",
+    "sudo-prompt": "^9.2.1"
   },
   "devDependencies": {
     "babel-plugin-transform-async-to-generator": "^6.24.1",
