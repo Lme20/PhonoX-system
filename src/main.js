@@ -13,11 +13,6 @@
  ** -----------------------------------------------------------*/
 
 import { app, BrowserWindow } from 'electron';
-import Vue from 'vue'
-import router from './router'
-
-//Import your main Vue component
-import App from './App.vue'
 
 //Handles application logic
 
@@ -39,13 +34,6 @@ const invisibleIconPath = path.join(__dirname, './renderer/assets/img/icons/png/
 // Set the app icon to a transparent icon
 const invisibleIcon = electron.nativeImage.createFromPath(invisibleIconPath);
 app.dock.setIcon(invisibleIcon);
-
-// create a new Vue instance
-new Vue({
-  el: '#app',
-  router,
-  render: h => h(App)
-})
 
 const createWindow = () => {
   // Create the browser window.
