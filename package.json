@@ -3,7 +3,7 @@
   "productName": "PhonoX",
   "version": "1.0.0",
   "description": "My Electron application description",
-  "main": "src/index.js",
+  "main": "src/main.js",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
@@ -53,6 +53,7 @@
     }
   },
   "dependencies": {
+    "edge-js": "^19.3.0",
     "electron-compile": "^6.4.4",
     "electron-squirrel-startup": "^1.0.0",
     "sudo-prompt": "^9.2.1"
