@@ -38,8 +38,8 @@ app.dock.setIcon(invisibleIcon);
 const createWindow = () => {
   // Create the browser window.
   menuWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1152,
+    height: 864,
     icon: path.join(__dirname, './renderer/assets/img/icons/png/64x64.png'),
     webPreferences: {
       nodeIntegration: true
