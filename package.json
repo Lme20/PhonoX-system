@@ -68,6 +68,8 @@
     "eslint-config-airbnb": "^15",
     "eslint-plugin-import": "^2",
     "eslint-plugin-jsx-a11y": "^5",
-    "eslint-plugin-react": "^7"
+    "eslint-plugin-react": "^7",
+    "postcss-preset-env": "^8.0.1",
+    "vite": "^4.2.1"
   }
 }

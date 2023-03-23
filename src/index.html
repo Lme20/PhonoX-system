@@ -1,54 +1,67 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <meta charset="utf-8">
-    <link rel="stylesheet" href="./renderer/assets/css/background.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="Canvas">
+    <meta name="color-scheme" content="dark">
+
+    <link rel="stylesheet" href="./renderer/assets/buttons/index.css">
+
     <title></title>
+
     <style>
-      .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      
       img {
         width: 720px;
         height: 163px;
       }
       
-      button {
-        margin: 10px;
-        padding: 10px;
-        border: none;
-        background-color: #4CAF50;
-        color: white;
-        font-size: 16px;
-        cursor: pointer;
-      }
-
-      .underlay {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 98%;
-        height: 98%;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: -1;
-        margin: 1px;
-      }
-
     </style>
+
   </head>
   <body>
-    <div class="underlay"></div> 
     <div class="container">
       <img src="/Users/louismercier/Projects/PhonoX-system/src/renderer/assets/img/PhonoX-big-White.png" alt="Logo">
-      <button>Button 1</button>
-      <button>Button 2</button>
-      <button>Button 3</button>
-      <button>Button 4</button>
     </div>
-    HIIII!!!!
+
+    <article class="fluid-flex">
+      <button>Default</button>
+      <input type="button" value="<input>"/>
+      <button>
+        <svg viewBox="0 0 24 24" stroke="currentColor" width="24" height="24" aria-hidden="true">
+          <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+        Icon
+      </button>
+      <button type="submit">Submit</button>
+      <button type="button">Type Button</button>
+      <button type="reset">Reset</button>
+      <button disabled>Disabled</button>
+      <button class="btn-custom">Custom</button>
+      <input type="file">
+    </article>
+
+    <section>
+      <h2>When inside a <code>&#60;form&#62;</code></h2>
+      <p><span class="red-squigly">Untyped buttons</span> visually match their new contextual default of type submit.</p>
+    </section>
+
+    <form action="" class="fluid-flex">
+      <button>Default</button>
+      <input type="button" value="<input>"/>
+      <button>Icon <span data-icon="cloud"></span></button>
+      <button type="submit">Submit</button>
+      <button type="button">Type Button</button>
+      <button type="reset">Reset</button>
+      <button disabled>Disabled</button>
+      <button class="btn-custom btn-large" type="button">Large Custom</button>
+      <input type="file">
+    </form>
+
+    <script src="./renderer/assets/buttons/index.js" type="module"></script>
+    
   </body>
 </html>
