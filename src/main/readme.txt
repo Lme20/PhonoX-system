@@ -6,3 +6,4 @@ manages windows, and communicates with the renderer process via IPC.
 
 
 Pluggin needed PostCSS Language Support
+electron-forge start in package.json 'start'
